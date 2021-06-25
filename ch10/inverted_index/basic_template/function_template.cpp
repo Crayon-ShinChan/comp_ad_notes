@@ -1,5 +1,9 @@
-//template1.cpp
+// template1.cpp
 #include <iostream>
+
+// basically, typename give the ability to call
+// the type as an alias before knowing
+// what the type is
 template <typename T>
 void swap(T &a, T &b)
 {
@@ -8,6 +12,7 @@ void swap(T &a, T &b)
     a = b;
     b = tmp;
 }
+
 int main(int argc, char *argv[])
 {
     int a = 2;
