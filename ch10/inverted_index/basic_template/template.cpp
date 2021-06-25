@@ -1,3 +1,4 @@
+// https://sg-first.gitbooks.io/cpp-template-tutorial/content/T_ji_ben_yu_fa.html
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -6,7 +7,7 @@
 
 using namespace std;
 
-template <class T>
+template <class T> // or template <typename T>
 class Stack
 {
 private:
