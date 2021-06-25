@@ -24,11 +24,12 @@ public:
         //遍历doc里所有的term
         for (int w = 0; w < doc.size(); w++)
         {
+            // https://stackoverflow.com/questions/13897200/iterator-for-vector-of-pointers-error-expected
             typename map<TKey, list<int> >::iterator it;
-            it = this->find(doc[w]);
+            it = this->find(doc[w]); // map 自带的函数 find，找 first 也就是 key 而不是 list
 
-            //如果该term的倒排链不存在，新建倒排链
-            if (it == this->end())
+            //如果该term的倒排链不存在（key 不存在），新建倒排链
+            if (it == this->end()) // 不存在的话 find 函数会返回 end，存在则是返回指向那个 key 的位置的迭代器
             {
                 list<int> newList;
                 (*this)[doc[w]] = newList;
