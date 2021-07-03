@@ -35,3 +35,7 @@
     "${fileDirname}{fileBasenameNoExtension"
 ],
 ```
+
+## 更顺畅地在 VS Code 看 Markdown 笔记
+
+安装 Markdown All in One 插件即可
