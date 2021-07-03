@@ -17,8 +17,8 @@
 
 ```json
 "code-runner.executorMap": {
-		"cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    },
+    "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+},
 ```
 
 ## 让 VS Code 不对 C++11 的特性的语句报红
@@ -27,11 +27,11 @@
 2. 将 `C_Cpp.default.compilerArgs` 这一项改为：
 
 ```json
-    "C_Cpp.default.compilerArgs": [
-        "-g",
-		"${file}",
-        "-std=c++11",
-		"-o",
-		"${fileDirname}/${fileBasenameNoExtension}"
-    ],
+"C_Cpp.default.compilerArgs": [
+    "-g",
+    "${file}",
+    "-std=c++11",
+    "-o",
+    "${fileDirname}{fileBasenameNoExtension"
+],
 ```
